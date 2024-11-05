@@ -16,7 +16,7 @@ const Header = () => {
   const { data } = useFetch('/logos?populate=*');
   const { isOpen, setIsOpen, itemsAmount } = useContext(CartContext);
   const [catNavMobile, setCatNavMobile] = useState(false);
-
+  console.log(data?.image?.url)
   return (
     <header className='bg-primary py-6 fixed w-full top-0 z-40 lg:relative xl:mb-[30px]'>
       <div className='container mx-auto'>
@@ -32,7 +32,7 @@ const Header = () => {
           {/* Logo */}
           <div>
             <Link to={"/"}>
-              <img src={`${process.env.REACT_APP_API_BASE_URL}${data?.[0]?.image?.[0]?.url}`} alt='logo' />
+              <img src={`${process.env.REACT_APP_API_BASE_URL}${data?.image?.url}`} alt='logo' />
             </Link>
           </div>
 
