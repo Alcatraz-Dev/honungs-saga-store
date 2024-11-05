@@ -16,10 +16,6 @@ const Header = () => {
   const { data } = useFetch('/logos?populate=*');
   const { isOpen, setIsOpen, itemsAmount } = useContext(CartContext);
   const [catNavMobile, setCatNavMobile] = useState(false);
-  const imageUrl = data?.[0]?.image?.[0]?.url;
-  if (imageUrl) {
-    console.log(imageUrl);
-  }
   return (
     <header className='bg-primary py-6 fixed w-full top-0 z-40 lg:relative xl:mb-[30px]'>
       <div className='container mx-auto'>
@@ -35,7 +31,7 @@ const Header = () => {
           {/* Logo */}
           <div>
             <Link to={"/"}>
-              <img src={`${imageUrl}`} alt='logo' />
+              <img src={`${data?.[0]?.image?.[0]?.url}`} alt='logo' />
             </Link>
           </div>
 

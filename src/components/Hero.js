@@ -38,7 +38,7 @@ const Hero = () => {
                   </a>
                 </div>
                 {/* image */}
-                <img className=' absolute  z-20 -top-7 -right-16' src={`${process.env.REACT_APP_API_BASE_URL}${promoOne?.image?.url}`} alt=' Promo img' />
+                <img className=' absolute  z-20 -top-7 -right-16' src={`${promoOne?.[0]?.image?.[0]?.url}`} alt=' Promo img' />
               </div>
             )}
             {/* promo img 2*/}
@@ -54,7 +54,7 @@ const Hero = () => {
                   </a>
                 </div>
                 {/* image */}
-                <img className=' absolute  z-20 top-5 -right-20' src={`${process.env.REACT_APP_API_BASE_URL}${promoTwo?.image?.url}`} alt=' Promo img' />
+                <img className=' absolute  z-20 top-5 -right-20' src={`${promoTwo?.[0]?.image?.[0]?.url}`} alt=' Promo img' />
               </div>
             )}
 

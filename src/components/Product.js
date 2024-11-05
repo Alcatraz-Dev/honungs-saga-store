@@ -18,7 +18,7 @@ const Product = ({ product }) => {
       <div className='w-full h-[200px] flex items-center justify-center relative'>
         <img
           className='w-[200px] h-[200px] group-hover:scale-90 transition-all duration-300'
-          src={`${process.env.REACT_APP_API_BASE_URL}${product?.image?.url}`}
+          src={`${product?.image?.url}`}
           alt='product image' />
       </div>
 

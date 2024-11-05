@@ -37,7 +37,7 @@ const MainSlider = () => {
                 </div>
                 {/* img */}
                 <div className='flex-1'>
-                  <img className='xl:absolute xl:-right-40 xl:-bottom-20' src={`${process.env.REACT_APP_API_BASE_URL}${slider?.image?.url}`} alt="slider img" />
+                  <img className='xl:absolute xl:-right-40 xl:-bottom-20' src={`${slider?.[0]?.image?.[0]?.url}`} alt="slider img" />
                 </div>
               </div>
             </SwiperSlide>)
