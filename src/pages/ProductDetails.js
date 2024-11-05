@@ -24,7 +24,7 @@ const ProductDetails = () => {
       <div className='flex flex-col lg:flex-row gap-[30px] mb-[30px]'>
         <div className='flex-1 lg:max-w-[40%] lg:h-[540px] grad rounded-lg flex justify-center items-center'>
           <img className='w-full max-w-[65%]'
-            src={`${process.env.REACT_APP_API_BASE_URL}${data?.image?.url}`}
+            src={`${data?.[0]?.image?.[0]?.url}`}
             alt='product image' />
         </div>
         <div className='flex-1  bg-primary p-12 xl:p-20 rounded-lg flex flex-col justify-center'>
