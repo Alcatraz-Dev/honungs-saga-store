@@ -16,7 +16,7 @@ const Header = () => {
   const { data } = useFetch('/logos?populate=*');
   const { isOpen, setIsOpen, itemsAmount } = useContext(CartContext);
   const [catNavMobile, setCatNavMobile] = useState(false);
-  const imageUrl = data?.[0]?.image?.url;
+  const imageUrl = data?.[0]?.image?.[0]?.url;
   if (imageUrl) {
     console.log(imageUrl);
   }
