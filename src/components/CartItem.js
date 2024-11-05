@@ -12,7 +12,7 @@ const CartItem = ({ item }) => {
   return <div className='flex gap-x-8'>
     <Link to={`/product/${item?.id}`} className='w-[100px] h-[100px]'>
       <img className=' w-[150px] h-[150px] object-cover mt-4  '
-        src={`${process.env.REACT_APP_API_BASE_URL}${item?.image?.url}`}
+        src={`${item?.image?.url}`}
         alt="product image" />
     </Link>
     <div className='flex-1  '>
