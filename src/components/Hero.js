@@ -10,7 +10,6 @@ import useFetch from '../hooks/useFetch';
 const Hero = () => {
   const { data: promoOne } = useFetch('/promo-banner-ones?populate=*');
   const { data: promoTwo } = useFetch('/promo-banner-tows?populate=*');
-  console.log(promoTwo[0]?.image[0]?.url)
   return (
     <section className='mb-[30px] pt-36 lg:pt-0 '>
       <div className='container mx-auto'>
