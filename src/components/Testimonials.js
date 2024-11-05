@@ -57,7 +57,7 @@ const Testimonials = () => {
                 <div className="mt-6 flex items-center z-20">
                   <div className="flex-shrink-0">
                     <div className="border-2 border-accent rounded-full p-1">
-                      <img src={`${testimonial?.image?.[0]?.url}`} className="h-12 w-12 rounded-full " alt={testimonial.name} />
+                      <img src={`${testimonial?.image?.url}`} className="h-12 w-12 rounded-full " alt={testimonial.name} />
                     </div>
                   </div>
                   <div className="ml-3">
