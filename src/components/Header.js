@@ -32,7 +32,7 @@ const Header = () => {
           {/* Logo */}
           <div>
             <Link to={"/"}>
-              <img src={`${process.env.REACT_APP_API_BASE_URL}${data[0]?.image[0]?.url}`} alt='logo' />
+              <img src={`${process.env.REACT_APP_API_BASE_URL}${data?.image?.url}`} alt='logo' />
             </Link>
           </div>
 
