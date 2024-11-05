@@ -10,7 +10,7 @@ import useFetch from '../hooks/useFetch';
 const Hero = () => {
   const { data: promoOne } = useFetch('/promo-banner-ones?populate=*');
   const { data: promoTwo } = useFetch('/promo-banner-tows?populate=*');
-
+  console.log(promoTwo[0]?.image[0]?.url)
   return (
     <section className='mb-[30px] pt-36 lg:pt-0 '>
       <div className='container mx-auto'>
@@ -55,7 +55,7 @@ const Hero = () => {
                   </a>
                 </div>
                 {/* image */}
-                <img className=' absolute  z-20 top-5 -right-20' src={`${process.env.REACT_APP_API_BASE_URL}${promoTwo[0]?.image[0]?.url}`}  alt=' Promo img' />
+                <img className=' absolute  z-20 top-5 -right-20' src={`${process.env.REACT_APP_API_BASE_URL}${promoTwo[0]?.image[0]?.url}`} alt=' Promo img' />
               </div>
             )}
 
