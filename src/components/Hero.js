@@ -3,8 +3,8 @@ import React from 'react';
 import CategoryNav from '../components/CategoryNav';
 import MainSlider from '../components/MainSlider';
 //images
-import PromoImg1 from '../img/promo_img1.png';
-import PromoImg2 from '../img/promo_img2.png';
+import discount from '../img/discount.png';
+
 // use fetch hook
 import useFetch from '../hooks/useFetch';
 const Hero = () => {
@@ -38,7 +38,12 @@ const Hero = () => {
                   </a>
                 </div>
                 {/* image */}
-                <img className=' absolute  z-20 -top-7 -right-16' src={`${promoOne?.[0]?.image?.[0]?.url}`} alt=' Promo img' />
+                {promoOne?.image?.[0]?.url ? (
+
+                  <img className=' absolute  z-20 -top-7 -right-16' src={`${promoOne?.[0]?.image?.[0]?.url}`} alt=' Promo img' />
+                ) : (
+                  <img className=' absolute  z-20 -top-7 -right-16' src={discount} alt=' Promo img' />
+                )}
               </div>
             )}
             {/* promo img 2*/}
@@ -54,7 +59,12 @@ const Hero = () => {
                   </a>
                 </div>
                 {/* image */}
-                <img className=' absolute  z-20 top-5 -right-20' src={`${promoTwo?.[0]?.image?.[0]?.url}`} alt=' Promo img' />
+                {promoTwo?.image?.[0]?.url ? (
+
+                  <img className=' absolute  z-20 top-5 -right-20' src={`${promoTwo?.[0]?.image?.[0]?.url}`} alt=' Promo img' />
+                ) : (
+                  <img className=' absolute  z-20 top-5 -right-20' src={discount} alt=' Promo img' />
+                )}
               </div>
             )}
 

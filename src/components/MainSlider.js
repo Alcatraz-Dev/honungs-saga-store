@@ -10,7 +10,7 @@ import '../slider.css';
 import { Pagination } from 'swiper';
 // use fetch hook
 import useFetch from '../hooks/useFetch';
-
+import discount from '../img/discount.png';
 const MainSlider = () => {
   const { data } = useFetch('/sliders?populate=*');
 
@@ -37,7 +37,11 @@ const MainSlider = () => {
                 </div>
                 {/* img */}
                 <div className='flex-1'>
-                  <img className='xl:absolute xl:-right-40 xl:-bottom-20' src={`${slider?.image?.[0]?.url}`} alt="slider img" />
+                  {slider?.image?.[0]?.url ? (
+                    <img className='xl:absolute xl:-right-40 xl:-bottom-20' src={`${slider?.image?.[0]?.url}`} alt="slider img" />
+                  ) : (
+                    <img className='xl:absolute xl:-right-40 xl:-bottom-20' src={discount} alt="slider img" />
+                  )}
                 </div>
               </div>
             </SwiperSlide>)

@@ -9,6 +9,8 @@ import RelatedProducts from '../components/RelatedProducts';
 import { CartContext } from '../context/CartContext';
 // icons
 import { ImSpinner9 } from "react-icons/im";
+//images 
+import comingSoon from '../img/comingSoon.jpg';
 const ProductDetails = () => {
   const { addToCart } = useContext(CartContext);
   const { id } = useParams();
@@ -23,9 +25,15 @@ const ProductDetails = () => {
     <div className='container mx-auto'>
       <div className='flex flex-col lg:flex-row gap-[30px] mb-[30px]'>
         <div className='flex-1 lg:max-w-[40%] lg:h-[540px] grad rounded-lg flex justify-center items-center'>
-          <img className='w-full max-w-[65%]'
-            src={`${data[0]?.image?.url}`}
-            alt='product image' />
+          {data[0]?.image?.url ? (
+            <img className='w-full max-w-[65%]'
+              src={`${data[0]?.image?.url}`}
+              alt='product image' />
+          ) : (
+            <img className='w-full max-w-[65%]'
+              src={comingSoon}
+              alt='product image' />
+          )}
         </div>
         <div className='flex-1  bg-primary p-12 xl:p-20 rounded-lg flex flex-col justify-center'>
           {/* category title */}

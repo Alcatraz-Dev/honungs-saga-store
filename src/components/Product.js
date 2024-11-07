@@ -1,7 +1,8 @@
 import React from 'react';
 //link
 import { Link } from 'react-router-dom';
-
+//images 
+import comingSoon from '../img/comingSoon.jpg';
 const Product = ({ product }) => {
   // console.log(product)
   return <Link to={`/product/${product?.id}`} className='w-full'>
@@ -16,10 +17,18 @@ const Product = ({ product }) => {
       )}
       {/* image */}
       <div className='w-full h-[200px] flex items-center justify-center relative'>
-        <img
-          className='w-[200px] h-[200px] group-hover:scale-90 transition-all duration-300'
-          src={`${product?.image?.url}`}
-          alt='product image' />
+        {product?.image?.url ? (
+          <img
+            className='w-[200px] h-[200px] group-hover:scale-90 transition-all duration-300'
+            src={`${product?.image?.url}`}
+            alt='product image' />
+        ) : (
+          <img
+            className='w-[200px] h-[200px] group-hover:scale-90 transition-all duration-300'
+            src={comingSoon}
+            alt='product image' />
+        )}
+
       </div>
 
       {/* text */}

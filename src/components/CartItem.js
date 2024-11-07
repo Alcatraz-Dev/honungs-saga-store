@@ -7,13 +7,16 @@ import { FaRegTrashCan } from "react-icons/fa6";
 import Qty from '../components/Qty';
 // context
 import { CartContext } from '../context/CartContext';
+import comingSoon from '../img/comingSoon.jpg';
 const CartItem = ({ item }) => {
   const { removeFromCart } = useContext(CartContext)
   return <div className='flex gap-x-8'>
     <Link to={`/product/${item?.id}`} className='w-[100px] h-[100px]'>
-      <img className=' w-[150px] h-[150px] object-cover mt-4  '
+      {item?.image?.url ? <img className=' w-[150px] h-[150px] object-cover mt-4  '
         src={`${item?.image?.url}`}
-        alt="product image" />
+        alt="product image" /> : <img className=' w-[150px] h-[150px] object-cover mt-4  '
+          src={comingSoon}
+          alt="product image" />}
     </Link>
     <div className='flex-1  '>
       {/* title & romive icon */}
