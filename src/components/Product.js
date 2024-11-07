@@ -19,7 +19,7 @@ const Product = ({ product }) => {
       <div className='w-full h-[200px] flex items-center justify-center relative'>
         {product?.image?.url ? (
           <img
-            className='w-[200px] h-[200px] group-hover:scale-90 transition-all duration-300'
+            className='w-[150px] h-[150px] group-hover:scale-90 transition-all duration-300'
             src={`${product?.image?.url}`}
             alt='product image' />
         ) : (
