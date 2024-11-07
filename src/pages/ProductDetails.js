@@ -48,9 +48,13 @@ const ProductDetails = () => {
           <p className='mb-12'>{data[0]?.description}</p>
           {/* price & btn */}
           <div className='flex items-center gap-x-8'>
+
             {/* price */}
-            <div className='text-3xl text-accent font-semibold'>
+            <div className='text-2xl text-accent font-semibold'>
               {(data[0]?.price).toFixed(2)} Kr
+            </div>
+            <div className='text-2xl text-accent font-semibold'>
+              {data[0]?.volume}
             </div>
             <button
               onClick={() => addToCart(data, id)}

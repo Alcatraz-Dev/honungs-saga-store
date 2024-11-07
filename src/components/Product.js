@@ -41,9 +41,14 @@ const Product = ({ product }) => {
         <div className='text-[15px] mb-4 lg:mb-9 line-clamp-1'>
           {product?.title.substring(0, 35) + "..."}
         </div>
-        {/*  price */}
-        <div className='text-lg text-accent'>
-          {product?.price} kr
+        {/*  price & volume */}
+        <div className='flex justify-between items-center'>
+          <div className='text-lg text-accent'>
+            {product?.volume}
+          </div>
+          <div className='text-lg text-accent'>
+            {product?.price} kr
+          </div>
         </div>
       </div>
     </div>
