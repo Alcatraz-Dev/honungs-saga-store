@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 //images 
 import comingSoon from '../img/comingSoon.jpg';
 const Product = ({ product }) => {
-  // console.log(product)
+  console.log(product?.volume)
+
   return <Link to={`/product/${product?.id}`} className='w-full'>
     <div className=' grad group w-full h-[362px] rounded-[8px] overflow-hidden relative  '>
       {/* badge */}
@@ -43,7 +44,7 @@ const Product = ({ product }) => {
         </div>
         {/*  price & volume */}
         <div className='flex justify-between items-center'>
-          <div className='text-lg text-accent'>
+          <div className='text-lg text-white'>
             {product?.volume}
           </div>
           <div className='text-lg text-accent'>

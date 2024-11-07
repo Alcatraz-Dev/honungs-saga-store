@@ -53,7 +53,7 @@ const ProductDetails = () => {
             <div className='text-2xl text-accent font-semibold'>
               {(data[0]?.price).toFixed(2)} Kr
             </div>
-            <div className='text-2xl text-accent font-semibold'>
+            <div className='text-2xl text-white font-semibold'>
               {data[0]?.volume}
             </div>
             <button
