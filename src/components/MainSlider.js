@@ -40,7 +40,7 @@ const MainSlider = () => {
                   {slider?.image?.[0]?.url ? (
                     <img className='xl:absolute xl:-right-40 xl:-bottom-20' src={`${slider?.image?.[0]?.url}`} alt="slider img" />
                   ) : (
-                    <img className='xl:absolute xl:-right-40 xl:-bottom-20' src={discount} alt="slider img" />
+                    <img className='xl:absolute xl:-right-40 xl:-bottom-20 p-10' src={discount} alt="slider img" />
                   )}
                 </div>
               </div>

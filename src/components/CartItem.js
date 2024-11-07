@@ -14,7 +14,7 @@ const CartItem = ({ item }) => {
     <Link to={`/product/${item?.id}`} className='w-[100px] h-[100px]'>
       {item?.image?.url ? <img className=' w-[150px] h-[150px] object-cover mt-4  '
         src={`${item?.image?.url}`}
-        alt="product image" /> : <img className=' w-[150px] h-[150px] object-cover mt-4  '
+        alt="product image" /> : <img className=' w-[100px] h-[100px] object-cover mt-4  '
           src={comingSoon}
           alt="product image" />}
     </Link>

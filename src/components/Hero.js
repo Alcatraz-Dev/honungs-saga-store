@@ -42,7 +42,7 @@ const Hero = () => {
 
                   <img className=' absolute  z-20 -top-7 -right-16' src={`${promoOne?.[0]?.image?.[0]?.url}`} alt=' Promo img' />
                 ) : (
-                  <img className=' absolute  z-20 -top-7 -right-16' src={discount} alt=' Promo img' />
+                  <img className=' absolute  z-20 -top-7 -right-16 p-10' src={discount} alt=' Promo img' />
                 )}
               </div>
             )}
@@ -63,7 +63,7 @@ const Hero = () => {
 
                   <img className=' absolute  z-20 top-5 -right-20' src={`${promoTwo?.[0]?.image?.[0]?.url}`} alt=' Promo img' />
                 ) : (
-                  <img className=' absolute  z-20 top-5 -right-20' src={discount} alt=' Promo img' />
+                  <img className=' absolute  z-20 top-5 -right-20 p-10' src={discount} alt=' Promo img' />
                 )}
               </div>
             )}

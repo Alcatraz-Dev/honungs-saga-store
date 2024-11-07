@@ -24,7 +24,7 @@ const Product = ({ product }) => {
             alt='product image' />
         ) : (
           <img
-            className='w-[200px] h-[200px] group-hover:scale-90 transition-all duration-300'
+            className='w-[150px] h-[150px] group-hover:scale-90 transition-all duration-300'
             src={comingSoon}
             alt='product image' />
         )}
