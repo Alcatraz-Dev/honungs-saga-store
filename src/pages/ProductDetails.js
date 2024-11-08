@@ -46,15 +46,14 @@ const ProductDetails = () => {
           </h2>
           {/* description */}
           <p className='mb-12'>{data[0]?.description}</p>
+          <div className='text-sm text-white font-semibold'>
+            {data[0]?.volume}
+          </div>
           {/* price & btn */}
           <div className='flex items-center gap-x-8'>
-
             {/* price */}
             <div className='text-xl text-accent font-semibold'>
               {(data[0]?.price).toFixed(2)} Kr
-            </div>
-            <div className='text-lg text-white font-semibold'>
-              {data[0]?.volume}
             </div>
             <button
               onClick={() => addToCart(data, id)}
