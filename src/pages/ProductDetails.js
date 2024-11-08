@@ -50,10 +50,10 @@ const ProductDetails = () => {
           <div className='flex items-center gap-x-8'>
 
             {/* price */}
-            <div className='text-2xl text-accent font-semibold'>
+            <div className='text-xl text-accent font-semibold'>
               {(data[0]?.price).toFixed(2)} Kr
             </div>
-            <div className='text-2xl text-white font-semibold'>
+            <div className='text-lg text-white font-semibold'>
               {data[0]?.volume}
             </div>
             <button

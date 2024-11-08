@@ -44,10 +44,10 @@ const Product = ({ product }) => {
         </div>
         {/*  price & volume */}
         <div className='flex justify-between items-center'>
-          <div className='text-lg text-white'>
+          <div className='text-sm text-white'>
             {product?.volume}
           </div>
-          <div className='text-lg text-accent'>
+          <div className='text-base text-accent'>
             {product?.price} kr
           </div>
         </div>
