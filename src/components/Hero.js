@@ -14,7 +14,9 @@ const Hero = () => {
   return (
     <section className='mb-[30px] pt-36 lg:pt-0 '>
       <div className='container mx-auto'>
-        <AboutUs />
+        <div className=' mb-10 pt-[100px] px-4 lg:pt-0 '>
+          <AboutUs />
+        </div>
         <div className='flex flex-col gap-y-[30px] xl:flex-row xl:gap-x-[30px]'>
           {/* sidebar */}
           <div>
