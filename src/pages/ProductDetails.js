@@ -23,7 +23,7 @@ const ProductDetails = () => {
   const categoryTitle = data[0]?.categories[0]?.title;
   return <div className='mb-16 pt-44 lg:pt-[30px] xl:pt-0'>
     <div className='container mx-auto'>
-      <div className='flex flex-col lg:flex-row gap-[30px] mb-[30px]'>
+      <div className='flex flex-col lg:flex-row gap-[30px] mb-[30px] mt-[30px] '>
         <div className='flex-1 lg:max-w-[40%] lg:h-[540px] grad rounded-lg flex justify-center items-center'>
           {data[0]?.image?.url ? (
             <img className='w-full max-w-[65%] rounded-md'
