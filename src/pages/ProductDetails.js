@@ -26,11 +26,11 @@ const ProductDetails = () => {
       <div className='flex flex-col lg:flex-row gap-[30px] mb-[30px]'>
         <div className='flex-1 lg:max-w-[40%] lg:h-[540px] grad rounded-lg flex justify-center items-center'>
           {data[0]?.image?.url ? (
-            <img className='w-full max-w-[65%]'
+            <img className='w-full max-w-[65%] rounded-md'
               src={`${data[0]?.image?.url}`}
               alt='product image' />
           ) : (
-            <img className='w-full max-w-[65%]'
+            <img className='w-full max-w-[65%] rounded-md'
               src={comingSoon}
               alt='product image' />
           )}
