@@ -26,7 +26,7 @@ const Footer = () => {
       {/* socials */}
       <div className='flex gap-x-6 max-w-max mx-auto text-lg mb-16'>
         <a href={`${InstagramUrl}`} target='_blank'
-          className='hover:text-accent transition-al bg-gradient-to-r from-purple-600 via-yellow-500 to-yellow-200 inline-block text-transparent bg-clip-text'
+          className='hover:text-accent transition-all duration-300'
         ><BsInstagram /></a>
       </div>
       {/* copyright */}
