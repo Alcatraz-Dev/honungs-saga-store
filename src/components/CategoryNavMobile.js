@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 // icons 
 import { FiX } from 'react-icons/fi'
 //link 
@@ -18,8 +18,8 @@ const CategoryNavMobile = ({ setCatNavMobile }) => {
     <div className='flex flex-col gap-y-8'>
       {data?.map(category => {
         return (
-          <Link to={`/products/${category?.id}`} className='uppercase font-medium ' key={category?.id}>
-            {category?.title} 
+          <Link to={`/products/${category?.id}`} onClick={() => setCatNavMobile(false)} className='uppercase font-medium ' key={category?.id}>
+            {category?.title}
           </Link>
         )
       })}

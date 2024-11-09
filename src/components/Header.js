@@ -30,8 +30,12 @@ const Header = () => {
 
           {/* Logo */}
           <div>
-            <Link to={"/"}>
-              <img src={`${data?.[0]?.image?.[0]?.url}`} alt='logo' className='w-[150px] h-[200px] ' />
+            <Link to="/">
+              <img
+                src={`${data?.[0]?.image?.[0]?.url}`}
+                alt="logo"
+                className="w-[120px] h-auto sm:w-[150px] lg:w-[180px] object-contain"
+              />
             </Link>
           </div>
 
