@@ -1,8 +1,10 @@
 import React from 'react';
 // icons 
 import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs';
-
+// use fetch hook
+import useFetch from '../hooks/useFetch';
 const Footer = () => {
+  const { data } = useFetch('/api/social-medias?populate=*');
   return <footer className='pt-16 bg-primary'>
     <div className='container mx-auto'>
       <div className='text-center'>
@@ -22,10 +24,8 @@ const Footer = () => {
       </div>
       {/* socials */}
       <div className='flex gap-x-6 max-w-max mx-auto text-lg mb-16'>
-        <a href='#' className='hover:text-white transition-all'><BsFacebook /></a>
-        <a href='#' className='hover:text-white transition-all'><BsInstagram /></a>
-        <a href='#' className='hover:text-white transition-all'><BsTwitter /></a>
-      </div> 
+        <a href={`${data?.url}`} className='hover:text-white transition-all'><BsInstagram /></a>
+      </div>
       {/* copyright */}
       <div className='py-10 border-t border-white/10'>
         <div className='container mx-auto'>

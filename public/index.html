@@ -1,36 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link rel="icon" href="%PUBLIC_URL%/img/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <title>Honungs Saga</title>
-    <!-- font -->
+    
+    <!-- Updated meta description with keywords for SEO -->
+    <meta name="description" content="Discover the finest organic wild honey sourced sustainably from pristine environments. Perfect for health enthusiasts and honey connoisseurs." />
+
+    <!-- Keywords for search engines -->
+    <meta name="keywords" content="organic honey, wild honey, natural honey, sustainable honey, health honey, premium honey" />
+    
+    <!-- Robots tag to ensure the page is indexed and followed -->
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph tags for social media preview -->
+    <meta property="og:title" content="Organic Wild Honey" />
+    <meta property="og:description" content="Premium organic wild honey, harvested sustainably for health and wellness." />
+    <meta property="og:image" content="%PUBLIC_URL%/img/icon.png" />
+    <meta property="og:url" content="https://organicwildhoney.vercel.app" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Organic Wild Honey" />
+    <meta name="twitter:description" content="Pure, natural wild honey for a healthy lifestyle." />
+    <meta name="twitter:image" content="%PUBLIC_URL%/img/icon.png" />
+    
+    <!-- Canonical URL to prevent duplicate content issues -->
+    <link rel="canonical" href="https://organicwildhoney.vercel.app" />
+
+    <!-- Structured Data for rich search results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Organic Wild Honey",
+      "image": "%PUBLIC_URL%/img/discount.png",
+      "description": "100% organic wild honey, harvested sustainably from untouched natural environments.",
+      "brand": {
+        "@type": "Brand",
+        "name": "Organic Wild Honey"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://organicwildhoney.vercel.app",
+        "priceCurrency": "SEK",
+        "price": "500",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+    </script>
+
+    <!-- Title with relevant keywords -->
+    <title>Organic Wild Honey - Pure and Natural Honey for Health</title>
+
+    <!-- Font Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+</body>
 </html>
