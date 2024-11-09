@@ -24,7 +24,7 @@ const Footer = () => {
       </div>
       {/* socials */}
       <div className='flex gap-x-6 max-w-max mx-auto text-lg mb-16'>
-        <a href={`${data?.url}`} className='hover:text-white transition-all'><BsInstagram /></a>
+        <a href={`${data?.url}`} target='_blank' className='hover:text-white transition-all'><BsInstagram /></a>
       </div>
       {/* copyright */}
       <div className='py-10 border-t border-white/10'>
