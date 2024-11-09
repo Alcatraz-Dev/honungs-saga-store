@@ -5,6 +5,7 @@ import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs';
 import useFetch from '../hooks/useFetch';
 const Footer = () => {
   const { data } = useFetch('/api/social-medias?populate=*');
+  const InstagramUrl = data?.[0]?.url;
   return <footer className='pt-16 bg-primary'>
     <div className='container mx-auto'>
       <div className='text-center'>
@@ -24,7 +25,7 @@ const Footer = () => {
       </div>
       {/* socials */}
       <div className='flex gap-x-6 max-w-max mx-auto text-lg mb-16'>
-        <a href={`${data?.[0]?.url}`} target='_blank' className='hover:text-white transition-all'><BsInstagram /></a>
+        <a href={`${InstagramUrl}`} target='_blank' className='hover:text-white transition-all'><BsInstagram /></a>
       </div>
       {/* copyright */}
       <div className='py-10 border-t border-white/10'>
