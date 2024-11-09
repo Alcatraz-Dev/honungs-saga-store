@@ -4,7 +4,7 @@ import useFetch from '../hooks/useFetch';
 function AboutUs() {
   const { data } = useFetch('/api/about-uses?populate=*');
   return (
-    <section aria-labelledby="about-us-title" className="px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16  text-center">
+    <section aria-labelledby="about-us-title" className=" mb-20 pt-[250px] px-4 lg:pt-0 text-center">
       {data?.title ? (
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 lg:mb-6">
           {data.title}
