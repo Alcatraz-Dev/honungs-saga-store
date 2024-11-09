@@ -1,6 +1,6 @@
 import React from 'react';
 // icons 
-import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs';
+import { BsInstagram } from 'react-icons/bs';
 // use fetch hook
 import useFetch from '../hooks/useFetch';
 const Footer = () => {
@@ -25,7 +25,14 @@ const Footer = () => {
       </div>
       {/* socials */}
       <div className='flex gap-x-6 max-w-max mx-auto text-lg mb-16'>
-        <a href={`${InstagramUrl}`} target='_blank' className='hover:text-white transition-all'><BsInstagram /></a>
+        <a href={`${InstagramUrl}`} target='_blank'
+          className='hover:text-accent transition-all'
+          style={{
+            background: 'linear-gradient(45deg, #f58529, #dd2a7b, #8134af)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+          }}
+        ><BsInstagram /></a>
       </div>
       {/* copyright */}
       <div className='py-10 border-t border-white/10'>
