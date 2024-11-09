@@ -2,6 +2,7 @@ import React from 'react';
 // import components
 import CategoryNav from '../components/CategoryNav';
 import MainSlider from '../components/MainSlider';
+import AboutUs from '../components/AboutUs';
 //images
 import discount from '../img/discount.png';
 
@@ -13,6 +14,7 @@ const Hero = () => {
   return (
     <section className='mb-[30px] pt-36 lg:pt-0 '>
       <div className='container mx-auto'>
+        <AboutUs />
         <div className='flex flex-col gap-y-[30px] xl:flex-row xl:gap-x-[30px]'>
           {/* sidebar */}
           <div>

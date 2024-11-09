@@ -10,14 +10,13 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Benefits from './components/Benefits';
 import Testimonials from './components/Testimonials';
-import AboutUs from './components/AboutUs';
+
 
 //layout 
 const Layout = () => {
   return (
     <>
       <Header />
-      <AboutUs />
       <Outlet />
       <Benefits />
       <Testimonials />
