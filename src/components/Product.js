@@ -20,12 +20,12 @@ const Product = ({ product }) => {
       <div className='w-full h-[200px] flex items-center justify-center relative'>
         {product?.image?.url ? (
           <img
-            className='w-[150px] h-[150px] group-hover:scale-90 transition-all duration-300'
+            className='w-[150px] h-[150px] group-hover:scale-90 transition-all duration-300 rounded-md'
             src={`${product?.image?.url}`}
             alt='product image' />
         ) : (
           <img
-            className='w-[150px] h-[150px] group-hover:scale-90 transition-all duration-300'
+            className='w-[150px] h-[150px] group-hover:scale-90 transition-all duration-300 rounded-md'
             src={comingSoon}
             alt='product image' />
         )}
