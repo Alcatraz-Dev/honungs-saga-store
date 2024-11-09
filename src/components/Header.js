@@ -34,7 +34,7 @@ const Header = () => {
               <img
                 src={`${data?.[0]?.image?.[0]?.url}`}
                 alt="logo"
-                className="w-[140px] h-auto sm:w-[180px] lg:w-[220px] object-contain"
+                className="w-[180px] h-auto sm:w-[220px] lg:w-[260px] xl:w-[300px] object-contain"
               />
             </Link>
           </div>
