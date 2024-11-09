@@ -5,7 +5,7 @@ import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs';
 import useFetch from '../hooks/useFetch';
 const Footer = () => {
   const { data } = useFetch('/api/social-medias?populate=*');
-  const InstagramUrl = data?.[0]?.url;
+  const InstagramUrl = data?.[0]?.url || 'https://www.instagram.com/organicwildhoney?igsh=dWI4cGcxZTI0dm82';
   return <footer className='pt-16 bg-primary'>
     <div className='container mx-auto'>
       <div className='text-center'>
