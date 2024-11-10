@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 //images 
 import comingSoon from '../img/comingSoon.jpg';
 const Product = ({ product }) => {
-  console.log(product?.volume)
-
   return (
     <Link to={`/product/${product?.id}`} className='w-full mt-[30px]'>
       <div className=' grad group w-full h-[362px] rounded-[8px] overflow-hidden relative  '>
