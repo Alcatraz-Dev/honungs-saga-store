@@ -16,11 +16,11 @@ function AboutUs() {
       )
       }
       {data ? (
-        <p className="text-base sm:text-lg lg:text-xl text-gray-200 leading-loose max-w-3xl mx-auto ">
+        <p className="text-base sm:text-lg lg:text-xl text-gray-200 leading-loose max-w-4xl mx-auto ">
           {data[0]?.description}
         </p>
       ) : (
-        <p className="text-base sm:text-lg lg:text-xl text-gray-200 leading-loose max-w-3xl mx-auto">
+        <p className="text-base sm:text-lg lg:text-xl text-gray-200 leading-loose max-w-4xl mx-auto">
           We are passionate about providing you with the purest, organic wild honey, ethically harvested from untouched, pristine environments.
           Our commitment to quality means that every jar of honey is carefully sourced and crafted to retain its natural richness, flavor, and nutritional properties.
 
