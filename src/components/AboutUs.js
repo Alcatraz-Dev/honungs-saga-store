@@ -6,7 +6,7 @@ function AboutUs() {
   return (
     <section aria-labelledby="about-us-title" className="text-center ">
       {data ? (
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 lg:mb-6">
+        <h2 id="about-us-title" className="text-3xl sm:text-4xl lg:text-5xl font-bold text-accent mb-4 lg:mb-6 ">
           {data[0]?.title}
         </h2>
       ) : (
