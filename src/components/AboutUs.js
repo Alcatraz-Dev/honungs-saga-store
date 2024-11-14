@@ -5,7 +5,7 @@ function AboutUs() {
   const { data } = useFetch('/about-uses?populate=*');
   return (
     <section aria-labelledby="about-us-title" className="text-center ">
-      {data?.title ? (
+      {data ? (
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 lg:mb-6">
           {data.title}
         </h2>
@@ -15,7 +15,7 @@ function AboutUs() {
         </h1>
       )
       }
-      {data?.description ? (
+      {data ? (
         <p className="text-base sm:text-lg lg:text-xl text-gray-200 leading-loose max-w-3xl mx-auto ">
           {data.description}
         </p>
