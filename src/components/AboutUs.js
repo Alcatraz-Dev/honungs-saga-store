@@ -23,13 +23,13 @@ function AboutUs() {
         </h1>
       )}
       {data ? (
-        <div className="text-base sm:text-lg lg:text-xl text-gray-200 leading-loose max-w-4xl mx-auto space-y-4">
+        <div className="text-base sm:text-lg lg:text-xl text-gray-200 leading-loose max-w-6xl mx-auto space-y-4">
           {data[0]?.description.split('\n').map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
         </div>
       ) : (
-        <div className="text-base sm:text-lg lg:text-xl text-gray-200 leading-loose max-w-4xl mx-auto space-y-4">
+        <div className="text-base sm:text-lg lg:text-xl text-gray-200 leading-loose max-w-6xl mx-auto space-y-4">
           <p>
             We are passionate about providing you with the purest, organic wild honey, ethically harvested from untouched, pristine environments.
           </p>
