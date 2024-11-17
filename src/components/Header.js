@@ -73,9 +73,9 @@ const Header = () => {
         </div>
 
         {/* Search form for mobile */}
-        <div className='xl:hidden mt-4'>
+        {/* <div className='xl:hidden mt-4'>
           <SearchForm />
-        </div>
+        </div> */}
 
       </div>
     </header>
