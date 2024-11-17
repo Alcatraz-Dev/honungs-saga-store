@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 // components
 import SearchForm from '../components/SearchForm';
 import CategoryNavMobile from '../components/CategoryNavMobile';
+import LanguageSelector from '../components/LanguageSelector';
 import Cart from '../components/Cart';
 // cart context 
 import { CartContext } from '../context/CartContext';
@@ -38,6 +39,8 @@ const Header = () => {
               />
             </Link>
           </div>
+          {/* Language Selector */}
+          <LanguageSelector />
 
           {/* Search form (desktop only) */}
           {/* <div className='hidden w-full xl:flex xl:max-w-[734px]'>
