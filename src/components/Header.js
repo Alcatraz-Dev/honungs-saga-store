@@ -34,15 +34,15 @@ const Header = () => {
               <img
                 src={`${data?.[0]?.image?.[0]?.url}`}
                 alt="logo"
-                className="w-[180px] h-auto sm:w-[220px] lg:w-[260px] xl:w-[300px] object-contain"
+                className="w-[120px] h-auto sm:w-[140px] lg:w-[160px] xl:w-[180px] object-contain"
               />
             </Link>
           </div>
 
           {/* Search form (desktop only) */}
-          <div className='hidden w-full xl:flex xl:max-w-[734px]'>
+          {/* <div className='hidden w-full xl:flex xl:max-w-[734px]'>
             <SearchForm />
-          </div>
+          </div> */}
 
           {/* Contact and Cart */}
           <div className='flex items-center gap-x-[10px]'>
