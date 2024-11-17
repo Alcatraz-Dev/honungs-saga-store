@@ -20,7 +20,7 @@ const Cart = () => {
         sessionId: res.data.id
       });
     } catch (error) {
-      console.error("Error occurred during checkout:", error);
+      console.error("Error occurred during checkout try again:", error);
       alert(error.response?.data?.error || "An error occurred while processing your payment.");
     }
   };
