@@ -65,7 +65,7 @@ const LanguageSelector = () => {
       onChange={handleChange}
       value={localeOptions.find((option) => option.value === language)}
       components={{ SingleValue, Option: CustomOption }}
-      className="w-16 flex items-center justify-center"
+      className="w-20 flex items-center justify-center bg-primary rounded-md"
       isSearchable={false} // Disable searching for languages
       isClearable={false} // Disable clearing the selection
       styles={{
