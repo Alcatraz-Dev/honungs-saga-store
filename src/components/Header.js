@@ -29,8 +29,8 @@ const Header = () => {
             <FiMenu />
           </div>
 
-          {/* Logo */}
-          <div>
+          {/* Logo (Centered on small screens, left-aligned on large screens) */}
+          <div className="flex justify-center sm:justify-start w-full">
             <Link to="/">
               <img
                 src={`${data?.[0]?.image?.[0]?.url}`}
