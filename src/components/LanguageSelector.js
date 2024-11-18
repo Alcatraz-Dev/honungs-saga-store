@@ -101,8 +101,10 @@ const LanguageSelector = () => {
         }),
         dropdownIndicator: (base) => ({
           ...base,
+          backgroundColor: '#151618', // Hover effect
           color: '#fff', // Indicator color
           padding: '0', // Remove default padding
+          borderRadius: '0.375rem', // Tailwind rounded-md
         }),
         indicatorSeparator: (base) => ({
           ...base,
