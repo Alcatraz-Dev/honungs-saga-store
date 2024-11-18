@@ -3,27 +3,31 @@ import Select from 'react-select';
 import useFetch from '../hooks/useFetch';
 
 const LanguageSelector = () => {
-  const { data: locales } = useFetch(`/i18n/locales`);
-  console.log('Locales:', locales);
-  const [selectedLocale, setSelectedLocale] = useState('sv');
+  // Fetch locales from the Strapi i18n plugin
+  const { data: locales, isLoading, error } = useFetch('/i18n/locales');
 
-  // Map locales to the format React Select requires
+  const [selectedLocale, setSelectedLocale] = useState('sv'); // Default to Swedish
+
+  if (isLoading) return <p>Loading...</p>;
+  if (error) return <p>Error loading locales: {error.message}</p>;
+
+  // Map locales to options format for React Select
   const localeOptions = locales?.map((locale) => ({
-    value: locale.code,
-    label: locale.name,
+    value: locale.code, // Use "code" for the value
+    label: locale.name, // Use "name" for the label
   }));
 
   const handleChange = (selectedOption) => {
-    setSelectedLocale(selectedOption.value);
+    setSelectedLocale(selectedOption.value); // Update the selected locale
     console.log('Selected Locale:', selectedOption.value);
   };
 
   return (
     <Select
-      options={localeOptions}
-      onChange={handleChange}
-      value={localeOptions?.find((option) => option.value === selectedLocale)}
-      placeholder="Select Language"
+      options={localeOptions} // Pass the mapped options
+      onChange={handleChange} // Handle selection change
+      value={localeOptions?.find((option) => option.value === selectedLocale)} // Set the selected value
+      placeholder="Select Language" // Placeholder for the select box
     />
   );
 };
