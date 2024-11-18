@@ -11,10 +11,20 @@ const LanguageSelector = () => {
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error loading data: {error.message}</p>;
 
-  // Map locales to options format for React Select
-  const localeOptions = data?.map((locale) => ({
-    value: locale.code, // Use "code" for the value
-    label: locale.name, // Use "name" for the label
+  // // Map locales to options format for React Select
+  // const localeOptions = data?.map((locale) => ({
+  //   value: locale.code, // Use "code" for the value
+  //   label: locale.name, // Use "name" for the label
+  // }));
+  const mockLocales = [
+    { code: 'ar', name: 'Arabic (ar)' },
+    { code: 'en', name: 'English (en)' },
+    { code: 'sv', name: 'Swedish (sv)' },
+  ];
+  
+  const localeOptions = mockLocales.map((locale) => ({
+    value: locale.code,
+    label: locale.name,
   }));
 
   const handleChange = (selectedOption) => {
