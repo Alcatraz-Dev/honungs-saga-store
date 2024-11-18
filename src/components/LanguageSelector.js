@@ -3,7 +3,7 @@ import Select from 'react-select';
 import useFetch from '../hooks/useFetch';
 
 const LanguageSelector = () => {
-  const { data: locales } = useFetch(`/locales`);
+  const { data: locales } = useFetch(`/i18n/locales`);
   console.log('Locales:', locales);
   const [selectedLocale, setSelectedLocale] = useState('sv');
 
