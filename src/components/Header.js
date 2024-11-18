@@ -30,7 +30,7 @@ const Header = () => {
           </div>
 
           {/* Logo (Centered on small screens, left-aligned on large screens) */}
-          <div className="flex justify-center ml-4 lg:justify-start   lg:ml-0  w-full">
+          <div className="flex justify-center lg:justify-start w-full lg:w-auto">
             <Link to="/">
               <img
                 src={`${data?.[0]?.image?.[0]?.url}`}
