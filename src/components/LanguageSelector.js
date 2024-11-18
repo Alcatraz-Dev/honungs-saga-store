@@ -60,7 +60,7 @@ const LanguageSelector = () => {
       options={localeOptions}
       onChange={handleChange}
       value={localeOptions.find((option) => option.value === language)}
-      placeholder="🌍" // Placeholder with a globe emoji
+      // placeholder="🌍" // Placeholder with a globe emoji
       components={{ SingleValue, Option: CustomOption }}
       className="w-24" // Tailwind width for dropdown
       styles={{
