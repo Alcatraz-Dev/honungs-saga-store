@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 // cart provider 
 import CartProvider from './context/CartContext';
-import LanguageProvider from './context/LanguageContext';
+import { LanguageProvider } from './context/LanguageContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

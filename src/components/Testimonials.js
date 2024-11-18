@@ -1,7 +1,7 @@
 
 import { FaStar } from "react-icons/fa";
 import { motion } from 'framer-motion';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 // use fetch hook
 import useFetch from '../hooks/useFetch';
 import { LanguageContext } from '../context/LanguageContext';

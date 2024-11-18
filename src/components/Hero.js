@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 // import components
 import CategoryNav from '../components/CategoryNav';
 import MainSlider from '../components/MainSlider';

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 // icons 
 import { FiX } from 'react-icons/fi'
 //link 
