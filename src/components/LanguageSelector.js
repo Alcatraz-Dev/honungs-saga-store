@@ -20,10 +20,10 @@ const localeOptions = [
 
 // Custom single-value display (selected option)
 const SingleValue = ({ data }) => (
-  <div className="flex items-center">
+  <div className="flex justify-center items-center">
     <img
       src={data.flag}
-      alt=""
+      alt="flag"
       className="w-6 h-4 object-cover rounded-sm"
     />
   </div>
@@ -36,11 +36,11 @@ const CustomOption = (props) => {
     <div
       ref={innerRef}
       {...innerProps}
-      className="flex items-center p-2 cursor-pointer bg-gray-800 hover:bg-gray-700 border-b border-gray-700"
+      className="flex justify-center items-center p-2 cursor-pointer bg-gray-800 hover:bg-gray-700 border-b border-gray-700"
     >
       <img
         src={data.flag}
-        alt=""
+        alt="flag"
         className="w-6 h-4 object-cover rounded-sm"
       />
     </div>
@@ -62,7 +62,7 @@ const LanguageSelector = () => {
       value={localeOptions.find((option) => option.value === language)}
       placeholder="🌍" // Placeholder with a globe emoji
       components={{ SingleValue, Option: CustomOption }}
-      className="w-32" // Tailwind width for dropdown
+      className="w-24" // Tailwind width for dropdown
       styles={{
         control: (base) => ({
           ...base,
@@ -85,7 +85,7 @@ const LanguageSelector = () => {
         singleValue: (base) => ({
           ...base,
           display: 'flex',
-          justifyContent: 'center',
+          justifyContent: 'center', // Center the flag
           alignItems: 'center',
         }),
         dropdownIndicator: (base) => ({
