@@ -10,7 +10,7 @@ import { LanguageContext } from '../context/LanguageContext';
 const CategoryNavMobile = ({ setCatNavMobile }) => {
   const { language } = useContext(LanguageContext);
   //get categories
-  const { data } = useFetch(`/categories[locale]=${language}&populate=*`);
+  const { data } = useFetch(`/categories?[locale]=${language}&populate=*`);
   return <div className='w-full h-full bg-primary p-8 '>
     {/* clase icon  */}
     <div
