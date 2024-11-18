@@ -39,7 +39,7 @@ const CustomOption = (props) => {
     <div
       ref={innerRef}
       {...innerProps}
-      className="flex justify-start items-center p-2 cursor-pointer bg-gray-800 hover:bg-gray-700"
+      className="flex justify-start items-center p-2 cursor-pointer"
     >
       <img
         src={data.flag}
@@ -71,7 +71,7 @@ const LanguageSelector = () => {
       styles={{
         control: (base) => ({
           ...base,
-          backgroundColor: '#151618', // Dark background
+          backgroundColor: '#151618', // Dark background for the control
           border: 'none', // Remove the border around the control
           borderRadius: '0.375rem', // Tailwind rounded-md
           cursor: 'pointer',
@@ -83,14 +83,14 @@ const LanguageSelector = () => {
         }),
         menu: (base) => ({
           ...base,
-          backgroundColor: '#151618', // Dropdown dark background
+          backgroundColor: '#151618', // Dark background for dropdown options
           borderRadius: '0.375rem', // Tailwind rounded-md
         }),
         option: (base, { isFocused }) => ({
           ...base,
-          backgroundColor: isFocused ? '#151618' : '#151618', // Hover effect
-          color: '#fff',
-          borderRadius: '0.375rem', // Tailwind rounded-md
+          backgroundColor: isFocused ? '#2c2c2c' : '#151618', // Consistent background color for options
+          color: '#fff', // Text color for options
+          borderRadius: '0.375rem', // Tailwind rounded-md for options
         }),
         singleValue: (base) => ({
           ...base,
@@ -101,7 +101,7 @@ const LanguageSelector = () => {
         }),
         dropdownIndicator: (base) => ({
           ...base,
-          backgroundColor: '#151618', // Hover effect
+          backgroundColor: '#151618', // Background color for the dropdown indicator
           color: '#fff', // Indicator color
           padding: '0', // Remove default padding
           borderRadius: '0.375rem', // Tailwind rounded-md
