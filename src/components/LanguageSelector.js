@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+ import React, { useContext } from 'react';
 import Select from 'react-select';
 import { LanguageContext } from '../context/LanguageContext';
 
@@ -20,11 +20,11 @@ const localeOptions = [
 
 // Custom single-value display (selected option)
 const SingleValue = ({ data }) => (
-  <div className="flex justify-center items-center p-2">
+  <div className="flex justify-center items-center ">
     <img
       src={data.flag}
       alt="flag"
-      className="w-5 h-5 object-cover rounded-sm" // Equal width and height for the flags
+      className="w-4 h-4 object-cover rounded-sm"
     />
   </div>
 );
@@ -41,7 +41,7 @@ const CustomOption = (props) => {
       <img
         src={data.flag}
         alt="flag"
-        className="w-5 h-5 object-cover rounded-sm" // Equal width and height for the flags
+        className="w-4 h-4 object-cover rounded-sm"
       />
     </div>
   );
@@ -62,7 +62,7 @@ const LanguageSelector = () => {
       value={localeOptions.find((option) => option.value === language)}
       placeholder="🌍" // Placeholder with a globe emoji
       components={{ SingleValue, Option: CustomOption }}
-      className="w-20" // Adjust the width for a smaller dropdown
+      className="w-24 flex items-center justify-center" // Tailwind width for dropdown
       styles={{
         control: (base) => ({
           ...base,
