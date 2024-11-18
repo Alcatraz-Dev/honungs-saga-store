@@ -103,6 +103,10 @@ const LanguageSelector = () => {
           ...base,
           display: 'none', // Remove the line separator between the flag and the arrow
         }),
+        placeholder: (base) => ({
+          ...base,
+          display: 'none', // Hide the placeholder
+        }),
       }}
     />
   );
