@@ -6,30 +6,26 @@ import { LanguageContext } from '../context/LanguageContext';
 const localeOptions = [
   {
     value: 'ar',
-    label: 'Arabic (ar)',
-    flag: 'https://flagcdn.com/w320/sa.png', // Example: Saudi Arabia flag for Arabic
+    flag: 'https://flagcdn.com/w320/sa.png', // Saudi Arabia flag for Arabic
   },
   {
     value: 'en',
-    label: 'English (en)',
-    flag: 'https://flagcdn.com/w320/gb.png', // Example: UK flag for English
+    flag: 'https://flagcdn.com/w320/gb.png', // UK flag for English
   },
   {
     value: 'sv',
-    label: 'Swedish (sv)',
     flag: 'https://flagcdn.com/w320/se.png', // Sweden flag
   },
 ];
 
 // Custom single-value display (selected option)
 const SingleValue = ({ data }) => (
-  <div style={{ display: 'flex', alignItems: 'center' }}>
+  <div className="flex items-center">
     <img
       src={data.flag}
       alt=""
-      style={{ width: 20, height: 15, marginRight: 10, objectFit: 'cover' }}
+      className="w-6 h-4 object-cover rounded-sm"
     />
-    {data.label}
   </div>
 );
 
@@ -40,19 +36,13 @@ const CustomOption = (props) => {
     <div
       ref={innerRef}
       {...innerProps}
-      style={{
-        display: 'flex',
-        alignItems: 'center',
-        padding: '10px',
-        cursor: 'pointer',
-      }}
+      className="flex items-center p-2 cursor-pointer bg-gray-800 hover:bg-gray-700 border-b border-gray-700"
     >
       <img
         src={data.flag}
         alt=""
-        style={{ width: 20, height: 15, marginRight: 10, objectFit: 'cover' }}
+        className="w-6 h-4 object-cover rounded-sm"
       />
-      {data.label}
     </div>
   );
 };
@@ -70,8 +60,43 @@ const LanguageSelector = () => {
       options={localeOptions}
       onChange={handleChange}
       value={localeOptions.find((option) => option.value === language)}
-      placeholder="Select Language"
-      components={{ SingleValue, Option: CustomOption }} // Apply custom renderers
+      placeholder="🌍" // Placeholder with a globe emoji
+      components={{ SingleValue, Option: CustomOption }}
+      className="w-32" // Tailwind width for dropdown
+      styles={{
+        control: (base) => ({
+          ...base,
+          backgroundColor: '#1e1e1e', // Dark background
+          border: '1px solid #3a3a3a',
+          borderRadius: '0.375rem', // Tailwind rounded-md
+          cursor: 'pointer',
+          boxShadow: 'none',
+        }),
+        menu: (base) => ({
+          ...base,
+          backgroundColor: '#1e1e1e', // Dropdown dark background
+          borderRadius: '0.375rem', // Tailwind rounded-md
+        }),
+        option: (base, { isFocused }) => ({
+          ...base,
+          backgroundColor: isFocused ? '#2c2c2c' : '#1e1e1e', // Hover effect
+          color: '#fff',
+        }),
+        singleValue: (base) => ({
+          ...base,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+        }),
+        dropdownIndicator: (base) => ({
+          ...base,
+          color: '#fff', // Indicator color
+        }),
+        placeholder: (base) => ({
+          ...base,
+          color: '#aaa',
+        }),
+      }}
     />
   );
 };

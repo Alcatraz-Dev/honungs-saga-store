@@ -39,8 +39,8 @@ const Header = () => {
               />
             </Link>
           </div>
-          {/* Language Selector */}
-          <LanguageSelector />
+
+
 
           {/* Search form (desktop only) */}
           {/* <div className='hidden w-full xl:flex xl:max-w-[734px]'>
@@ -49,7 +49,7 @@ const Header = () => {
 
           {/* Contact and Cart */}
           <div className='flex items-center gap-x-[10px]'>
-
+            <LanguageSelector />
             {/* Contact text (desktop only) */}
             {/* <div className='hidden xl:flex uppercase'>
               Need help? Call us
