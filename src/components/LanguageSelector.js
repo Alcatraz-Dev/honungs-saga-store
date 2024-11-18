@@ -4,15 +4,15 @@ import useFetch from '../hooks/useFetch';
 
 const LanguageSelector = () => {
   // Fetch locales from the Strapi i18n plugin
-  const { data: locales, isLoading, error } = useFetch('/i18n/locales');
-console.log(locales[0]);
+  const { data, isLoading, error } = useFetch('/i18n/locales?populate=*');
+  console.log(data.code);
   const [selectedLocale, setSelectedLocale] = useState('sv'); // Default to Swedish
 
   if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>Error loading locales: {error.message}</p>;
+  if (error) return <p>Error loading data: {error.message}</p>;
 
   // Map locales to options format for React Select
-  const localeOptions = locales?.map((locale) => ({
+  const localeOptions = data?.map((locale) => ({
     value: locale.code, // Use "code" for the value
     label: locale.name, // Use "name" for the label
   }));
