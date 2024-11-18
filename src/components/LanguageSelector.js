@@ -20,7 +20,7 @@ const localeOptions = [
 
 // Custom single-value display (selected option)
 const SingleValue = ({ data }) => (
-  <div className="flex justify-center items-center">
+  <div className="flex justify-center items-center p-2">
     <img
       src={data.flag}
       alt="flag"
@@ -62,7 +62,7 @@ const LanguageSelector = () => {
       value={localeOptions.find((option) => option.value === language)}
       placeholder="🌍" // Placeholder with a globe emoji
       components={{ SingleValue, Option: CustomOption }}
-      className="w-24" // Tailwind width for dropdown
+      className="w-24 flex items-center justify-center" // Tailwind width for dropdown
       styles={{
         control: (base) => ({
           ...base,
