@@ -3,11 +3,8 @@ import Select from 'react-select';
 import useFetch from '../hooks/useFetch';
 
 const LanguageSelector = () => {
-  const { data: locales, isLoading, error } = useFetch('/locales');
+  const { data: locales } = useFetch(`/locales`);
   const [selectedLocale, setSelectedLocale] = useState('en');
-
-  if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>Error loading locales: {error.message}</p>;
 
   // Map locales to the format React Select requires
   const localeOptions = locales?.map((locale) => ({
