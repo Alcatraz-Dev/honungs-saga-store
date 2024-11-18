@@ -60,9 +60,9 @@ const LanguageSelector = () => {
       options={localeOptions}
       onChange={handleChange}
       value={localeOptions.find((option) => option.value === language)}
-      // placeholder="🌍" // Placeholder with a globe emoji
+      placeholder="🌍" // Placeholder with a globe emoji
       components={{ SingleValue, Option: CustomOption }}
-      className="w-24 flex justify-center items-center" // Tailwind width for dropdown
+      className="w-24" // Tailwind width for dropdown
       styles={{
         control: (base) => ({
           ...base,
@@ -71,6 +71,9 @@ const LanguageSelector = () => {
           borderRadius: '0.375rem', // Tailwind rounded-md
           cursor: 'pointer',
           boxShadow: 'none',
+          display: 'flex',
+          alignItems: 'center', // Ensure center alignment for the selected value
+          justifyContent: 'center',
         }),
         menu: (base) => ({
           ...base,
@@ -85,8 +88,9 @@ const LanguageSelector = () => {
         singleValue: (base) => ({
           ...base,
           display: 'flex',
-          justifyContent: 'center', // Center the flag
+          justifyContent: 'center', // Center the flag in the selected value area
           alignItems: 'center',
+          padding: '0', // Remove any padding
         }),
         dropdownIndicator: (base) => ({
           ...base,
