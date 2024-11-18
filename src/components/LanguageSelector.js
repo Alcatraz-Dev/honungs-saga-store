@@ -2,19 +2,22 @@ import React, { useContext } from 'react';
 import Select from 'react-select';
 import { LanguageContext } from '../context/LanguageContext';
 
-// Define the options with flag images
+// Define the options with flag images and language names
 const localeOptions = [
   {
     value: 'ar',
     flag: 'https://flagcdn.com/w320/sa.png', // Saudi Arabia flag for Arabic
+    label: 'Arabic', // Language name
   },
   {
     value: 'en',
     flag: 'https://flagcdn.com/w320/gb.png', // UK flag for English
+    label: 'English', // Language name
   },
   {
     value: 'sv',
-    flag: 'https://flagcdn.com/w320/se.png', // Sweden flag
+    flag: 'https://flagcdn.com/w320/se.png', // Sweden flag for Swedish
+    label: 'Swedish', // Language name
   },
 ];
 
@@ -43,6 +46,7 @@ const CustomOption = (props) => {
         alt="flag"
         className="w-5 h-5 object-cover rounded-sm mr-2" // Adjusted size and margin
       />
+      <span className="text-white">{data.label}</span> {/* Display language name */}
     </div>
   );
 };
