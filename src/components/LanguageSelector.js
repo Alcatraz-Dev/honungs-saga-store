@@ -20,11 +20,11 @@ const localeOptions = [
 
 // Custom single-value display (selected option)
 const SingleValue = ({ data }) => (
-  <div className="flex justify-center items-center p-1">
+  <div className="flex justify-center items-center p-2">
     <img
       src={data.flag}
       alt="flag"
-      className="w-5 h-3.5 object-cover rounded-sm" // Smaller flag size
+      className="w-5 h-5 object-cover rounded-sm" // Equal width and height for the flags
     />
   </div>
 );
@@ -41,7 +41,7 @@ const CustomOption = (props) => {
       <img
         src={data.flag}
         alt="flag"
-        className="w-5 h-3.5 object-cover rounded-sm" // Smaller flag size
+        className="w-5 h-5 object-cover rounded-sm" // Equal width and height for the flags
       />
     </div>
   );
@@ -62,7 +62,7 @@ const LanguageSelector = () => {
       value={localeOptions.find((option) => option.value === language)}
       placeholder="🌍" // Placeholder with a globe emoji
       components={{ SingleValue, Option: CustomOption }}
-      className="w-16" // Smaller width for the dropdown
+      className="w-20" // Adjust the width for a smaller dropdown
       styles={{
         control: (base) => ({
           ...base,
@@ -72,7 +72,7 @@ const LanguageSelector = () => {
           cursor: 'pointer',
           boxShadow: 'none',
           display: 'flex',
-          alignItems: 'center', // Center alignment for the selected value
+          alignItems: 'center', // Ensure center alignment for the selected value
           justifyContent: 'center',
         }),
         menu: (base) => ({
