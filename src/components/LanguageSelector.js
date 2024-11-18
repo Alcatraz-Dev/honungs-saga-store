@@ -26,7 +26,6 @@ const SingleValue = ({ data }) => (
       alt="flag"
       className="w-5 h-5 object-cover rounded-sm mr-2" // Adjusted size and added margin to space the flag
     />
-    <span className="text-white">{data.value}</span> {/* Display the language name next to the flag */}
   </div>
 );
 
@@ -44,7 +43,6 @@ const CustomOption = (props) => {
         alt="flag"
         className="w-5 h-5 object-cover rounded-sm mr-2" // Adjusted size and margin
       />
-      <span className="text-white">{data.value}</span>
     </div>
   );
 };
@@ -63,12 +61,14 @@ const LanguageSelector = () => {
       onChange={handleChange}
       value={localeOptions.find((option) => option.value === language)}
       components={{ SingleValue, Option: CustomOption }}
-      className="w-24 flex items-center justify-center"
+      className="w-16 flex items-center justify-center"
+      isSearchable={false} // Disable searching for languages
+      isClearable={false} // Disable clearing the selection
       styles={{
         control: (base) => ({
           ...base,
           backgroundColor: '#1e1e1e', // Dark background
-          border: 'none', // Removed the border around the control
+          border: 'none', // Remove the border around the control
           borderRadius: '0.375rem', // Tailwind rounded-md
           cursor: 'pointer',
           boxShadow: 'none',
