@@ -7,14 +7,16 @@ import useFetch from '../hooks/useFetch';
 import RelatedProducts from '../components/RelatedProducts';
 // context 
 import { CartContext } from '../context/CartContext';
+import { LanguageContext } from '../context/LanguageContext';
 // icons
 import { ImSpinner9 } from "react-icons/im";
 //images 
 import comingSoon from '../img/comingSoon.jpg';
 const ProductDetails = () => {
+  const { language } = useContext(LanguageContext);
   const { addToCart } = useContext(CartContext);
   const { id } = useParams();
-  const { data } = useFetch(`products?populate=*&filters[id][$eq]=${id}`);
+  const { data } = useFetch(`products?[locale]=${language}&populate=*&filters[id][$eq]=${id}`);
 
   if (!data) {
     return <div className='h-screen flex justify-center items-center'><ImSpinner9 className='animate-spin text-accent text-4xl' /></div>;

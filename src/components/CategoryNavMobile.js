@@ -5,9 +5,12 @@ import { FiX } from 'react-icons/fi'
 import { Link } from 'react-router-dom';
 //use fetch hook
 import useFetch from '../hooks/useFetch';
+import { LanguageContext } from '../context/LanguageContext';
+
 const CategoryNavMobile = ({ setCatNavMobile }) => {
+  const { language } = useContext(LanguageContext);
   //get categories
-  const { data } = useFetch("/categories");
+  const { data } = useFetch(`/categories[locale]=${language}&populate=*`);
   return <div className='w-full h-full bg-primary p-8 '>
     {/* clase icon  */}
     <div

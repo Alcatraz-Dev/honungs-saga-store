@@ -3,8 +3,10 @@ import React from 'react';
 import ProductSlider from '../components/ProductSlider';
 //use fetch hooks
 import useFetch from '../hooks/useFetch';
+import { LanguageContext } from '../context/LanguageContext';
 const LatestProducts = () => {
-  const { data } = useFetch(`/products?populate=*&[filters][isNew][$eq]=true`);
+  const { language } = useContext(LanguageContext);
+  const { data } = useFetch(`/products?[locale]=${language}&populate=*&[filters][isNew][$eq]=true`);
   return (
 
     <div className='mb-16 '>

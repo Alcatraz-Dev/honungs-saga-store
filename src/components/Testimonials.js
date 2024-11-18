@@ -4,8 +4,10 @@ import { motion } from 'framer-motion';
 import React, { useEffect, useRef, useState } from 'react';
 // use fetch hook
 import useFetch from '../hooks/useFetch';
+import { LanguageContext } from '../context/LanguageContext';
 const Testimonials = () => {
-  const { data: testimonial } = useFetch('/testimonials?populate=*')
+  const { language } = useContext(LanguageContext);
+  const { data: testimonial } = useFetch(`/testimonials?[locale]=${language}&populate=*`)
   const [isHovered, setIsHovered] = useState(false);
   const scrollRef = useRef(null);
 

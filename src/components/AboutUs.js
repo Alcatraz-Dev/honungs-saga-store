@@ -1,9 +1,11 @@
 import React from 'react';
 // use fetch hook
 import useFetch from '../hooks/useFetch';
+import { LanguageContext } from '../context/LanguageContext';
 
 function AboutUs() {
-  const { data } = useFetch('/about-uses?populate=*');
+  const { language } = useContext(LanguageContext);
+  const { data } = useFetch(`/about-uses?[locale]=${language}&populate=*`);
 
   return (
     <section aria-labelledby="about-us-title" className="text-center">

@@ -11,8 +11,10 @@ import { Pagination } from 'swiper';
 // use fetch hook
 import useFetch from '../hooks/useFetch';
 import discount from '../img/discount.png';
+import { LanguageContext } from '../context/LanguageContext';
 const MainSlider = () => {
-  const { data } = useFetch('/sliders?populate=*');
+  const { language } = useContext(LanguageContext);
+  const { data } = useFetch(`/sliders?[locale]=${language}&populate=*`);
 
   return (
     <Swiper modules={[Pagination]} loop={true} pagination={{ clickable: true }}

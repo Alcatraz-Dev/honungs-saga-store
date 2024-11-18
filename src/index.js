@@ -4,14 +4,16 @@ import './index.css';
 import App from './App';
 // cart provider 
 import CartProvider from './context/CartContext';
-
+import LanguageProvider from './context/LanguageContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CartProvider>
-      <App />
-    </CartProvider>
+    <LanguageProvider>
+      <CartProvider>
+        <App />
+      </CartProvider>
+    </LanguageProvider>
   </React.StrictMode>
 );

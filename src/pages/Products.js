@@ -6,10 +6,12 @@ import useFetch from '../hooks/useFetch';
 // components
 import CategoryNav from '../components/CategoryNav';
 import Product from '../components/Product';
+import { LanguageContext } from '../context/LanguageContext';
 const Products = () => {
+  const { language } = useContext(LanguageContext);
   const { id } = useParams();
   // get products based on category
-  const { data } = useFetch(`/products?populate=*&[filters][categories][$eq]=${id}`);
+  const { data } = useFetch(`/products?[locale]=${language}&populate=*&[filters][categories][$eq]=${id}`);
   const [title, setTitle] = useState(null)
   //set the title when the data is fetched
   useEffect(() => {

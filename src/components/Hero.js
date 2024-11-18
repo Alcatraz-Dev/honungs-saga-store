@@ -5,12 +5,13 @@ import MainSlider from '../components/MainSlider';
 import AboutUs from '../components/AboutUs';
 //images
 import discount from '../img/discount.png';
-
+import { LanguageContext } from '../context/LanguageContext';
 // use fetch hook
 import useFetch from '../hooks/useFetch';
 const Hero = () => {
-  const { data: promoOne } = useFetch('/promo-banner-ones?populate=*');
-  const { data: promoTwo } = useFetch('/promo-banner-tows?populate=*');
+  const { language } = useContext(LanguageContext);
+  const { data: promoOne } = useFetch(`/promo-banner-ones?[locale]=${language}&populate=*`);
+  const { data: promoTwo } = useFetch(`/promo-banner-tows?[locale]=${language}&populate=*`);
   return (
     <section className='mb-[30px] pt-36 lg:pt-0 '>
       <div className='container mx-auto'>
