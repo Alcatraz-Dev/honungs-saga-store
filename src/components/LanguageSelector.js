@@ -88,8 +88,9 @@ const LanguageSelector = () => {
         }),
         option: (base, { isFocused }) => ({
           ...base,
-          backgroundColor: isFocused ? '#2c2c2c' : '#151618', // Hover effect
+          backgroundColor: isFocused ? '#151618' : '#151618', // Hover effect
           color: '#fff',
+          borderRadius: '0.375rem', // Tailwind rounded-md
         }),
         singleValue: (base) => ({
           ...base,
