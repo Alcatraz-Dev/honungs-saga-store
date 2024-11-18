@@ -40,14 +40,16 @@ const Header = () => {
             </Link>
           </div>
 
-          {/* Language Selector */}
-          <LanguageSelector />
-
-          {/* Cart icon with item count */}
-          <div onClick={() => setIsOpen(!isOpen)} className="relative cursor-pointer">
-            <SlBag className="text-2xl" />
-            <div className="bg-accent text-primary absolute w-[18px] h-[18px] rounded-full top-3 -right-1 text-[13px] flex justify-center items-center font-bold tracking-[-0.1em]">
-              {itemsAmount}
+          {/* Language Selector and Cart Icon Container */}
+          <div className="flex items-center gap-x-4">
+            <LanguageSelector /> {/* Language selector */}
+            
+            {/* Cart icon with item count */}
+            <div onClick={() => setIsOpen(!isOpen)} className="relative cursor-pointer">
+              <SlBag className="text-2xl" />
+              <div className="bg-accent text-primary absolute w-[18px] h-[18px] rounded-full top-3 -right-1 text-[13px] flex justify-center items-center font-bold tracking-[-0.1em]">
+                {itemsAmount}
+              </div>
             </div>
           </div>
         </div>
