@@ -24,8 +24,9 @@ const SingleValue = ({ data }) => (
     <img
       src={data.flag}
       alt="flag"
-      className="w-5 h-5 object-cover rounded-sm" // Adjusted size
+      className="w-5 h-5 object-cover rounded-sm mr-2" // Adjusted size and added margin to space the flag
     />
+    <span className="text-white">{data.value}</span> {/* Display the language name next to the flag */}
   </div>
 );
 
