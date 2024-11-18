@@ -5,7 +5,7 @@ import useFetch from '../hooks/useFetch';
 const LanguageSelector = () => {
   // Fetch locales from the Strapi i18n plugin
   const { data, isLoading, error } = useFetch('/i18n/locales?populate=*');
-  console.log(data?.data);
+  console.log(data?.[0]);
   const [selectedLocale, setSelectedLocale] = useState('sv'); // Default to Swedish
 
   if (isLoading) return <p>Loading...</p>;
