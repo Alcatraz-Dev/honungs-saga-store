@@ -4,7 +4,8 @@ import useFetch from '../hooks/useFetch';
 
 const LanguageSelector = () => {
   const { data: locales } = useFetch(`/locales`);
-  const [selectedLocale, setSelectedLocale] = useState('en');
+  console.log('Locales:', locales);
+  const [selectedLocale, setSelectedLocale] = useState('sv');
 
   // Map locales to the format React Select requires
   const localeOptions = locales?.map((locale) => ({
