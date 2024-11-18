@@ -7,17 +7,17 @@ const localeOptions = [
   {
     value: 'ar',
     flag: 'https://flagcdn.com/w320/sa.png', // Saudi Arabia flag for Arabic
-    label: 'Arabic', // Language name
+    label: 'Ar', // Language name
   },
   {
     value: 'en',
     flag: 'https://flagcdn.com/w320/gb.png', // UK flag for English
-    label: 'English', // Language name
+    label: 'En', // Language name
   },
   {
     value: 'sv',
     flag: 'https://flagcdn.com/w320/se.png', // Sweden flag for Swedish
-    label: 'Swedish', // Language name
+    label: 'Sw', // Language name
   },
 ];
 
@@ -27,7 +27,7 @@ const SingleValue = ({ data }) => (
     <img
       src={data.flag}
       alt="flag"
-      className="w-5 h-5 object-cover rounded-sm mr-2" // Adjusted size and added margin to space the flag
+      className="w-6 h-4 object-cover rounded-sm mr-2" // Adjusted size and added margin to space the flag
     />
   </div>
 );
@@ -44,7 +44,7 @@ const CustomOption = (props) => {
       <img
         src={data.flag}
         alt="flag"
-        className="w-5 h-5 object-cover rounded-sm mr-2" // Adjusted size and margin
+        className="w-6 h-4 object-cover rounded-sm mr-2" // Adjusted size and margin
       />
       <span className="text-white">{data.label}</span> {/* Display language name */}
     </div>
