@@ -67,7 +67,7 @@ const LanguageSelector = () => {
       styles={{
         control: (base) => ({
           ...base,
-          backgroundColor: '#1e1e1e', // Dark background
+          backgroundColor: '#151618', // Dark background
           border: 'none', // Remove the border around the control
           borderRadius: '0.375rem', // Tailwind rounded-md
           cursor: 'pointer',
@@ -79,12 +79,12 @@ const LanguageSelector = () => {
         }),
         menu: (base) => ({
           ...base,
-          backgroundColor: '#1e1e1e', // Dropdown dark background
+          backgroundColor: '#151618', // Dropdown dark background
           borderRadius: '0.375rem', // Tailwind rounded-md
         }),
         option: (base, { isFocused }) => ({
           ...base,
-          backgroundColor: isFocused ? '#2c2c2c' : '#1e1e1e', // Hover effect
+          backgroundColor: isFocused ? '#2c2c2c' : '#151618', // Hover effect
           color: '#fff',
         }),
         singleValue: (base) => ({
