@@ -8,7 +8,7 @@ const LanguageSelector = () => {
   const [selectedLocale, setSelectedLocale] = useState('sv'); // Default language: Swedish
 
   // Debug fetched data
-  console.log('Data from useFetch:', data);
+  console.log('Data from useFetch:', data.map((locale) => locale.name));
 
   // Handle loading and error states
   if (isLoading) return <p>Loading languages...</p>;
