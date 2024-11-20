@@ -18,7 +18,7 @@ const Footer = () => {
       returnsPolicy: 'Returns Policy',
       trackOrder: 'Track your order',
       shipping: 'Shipping & Delivery',
-      copyright: `&copy; ${new Date().getFullYear()}. All rights reserved.`
+      copyright: `© ${new Date().getFullYear()}. All rights reserved.`
     },
     sv: {
       title: 'Prenumerera på vårt nyhetsbrev',
